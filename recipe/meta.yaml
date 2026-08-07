@@ -1,5 +1,5 @@
 {% set name = "atomman" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0d301454e7a253c025529b50d043feb4d923f1f22210a5422606fe0f60508d5c
+  sha256: 75b440bd88ed3fa1375fb4a5cfcf7143ddbc8d24f288889da9b3b690607bd811
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<=38 or python_impl == 'pypy']
 
